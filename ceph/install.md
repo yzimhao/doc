@@ -80,7 +80,7 @@
   service ceph -a start
 
 
- 一些常用的命令
+一些常用的命令
 
   ceph -s #查看ceph集群状态，返回信息中 HEALTH_OK说明集群状态正常
   ceph osd tree #查看osd设备映射关系，权重等信息
