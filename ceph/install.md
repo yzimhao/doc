@@ -17,10 +17,10 @@
 #### 5.修改hosts文件,定义每个节点的名称
 *hosts指向的名称，需要和第一步修改的主机名对应, 修改完成scp到每一台机器*
 
-    172.17.6.81 ceph-mon0
-    172.17.10.42 ceph-osd0
-    172.17.6.78  ceph-osd1
-    172.17.6.29 ceph-mds0
+    172.17.6.81 ceph-mon0 #监控节点
+    172.17.10.42 ceph-osd0 #存储节点0
+    172.17.6.78  ceph-osd1 #存储节点1
+    172.17.6.29 ceph-mds0 #元数据节点
 
 #### 6. 开始安装ceph
     ceph-deploy install ceph-mon0 ceph-osd0 ceph-osd1 ceph-mds0
@@ -78,6 +78,14 @@
 一切顺利的话，就可以启动ceph了，
 
     service ceph -a start
+
+这时osd服务应该还不能启动，需要执行下面的命令
+    
+    ceph osd create #有几个存储设备就执行几次
+
+再执行启动osd
+
+    service ceph -a start osd
 
 
 一些常用的命令
