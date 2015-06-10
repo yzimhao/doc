@@ -1,4 +1,4 @@
-#### ceph
+#### Ceph
 参考文档
 > https://www.ustack.com/blog/ceph_infra/
 
