@@ -14,3 +14,5 @@ Ceph 生态系统架构可以划分为四部分：
  3. cosd：Object storage cluster，对象存储集群（将数据和元数据作为对象存储，执行其他 关键职能）
  4. cmon：Cluster monitors，集群监视器（执行监视功能）
 
+
+(http://42.62.73.30/wordpress/wp-content/uploads/2013/09/Distributed-Object-Store.png)
