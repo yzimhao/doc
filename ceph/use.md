@@ -17,6 +17,6 @@
     echo "test" > testfile.txt
     rados put test testfile.txt --pool=test-a
 
-#### 查询存储文件的位置信息
+#### 查询object映射的pg信息
     
     ceph osd map test-a testfile.txt
