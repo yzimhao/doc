@@ -24,6 +24,7 @@ Ceph 生态系统架构可以划分为四部分：
  4. CRUSH Rules：数据映射的策略。这些策略可以灵活的设置object存放的区域。比如可以指定
 pool1中所有objecst放置在机架1上，所有objects的第1个副本放置在机架1上的服务器A上，第2个副本分布在机架1上的服务器B上。 pool2中所有的object分布在机架2、3、4上，所有Object的第1个副本分布在机架2的服务器上，第2个副本分布在机架3的服 器上，第3个副本分布在机架4的服务器上。
  
- 
+
+Client从Monitors中得到CRUSH MAP、OSD MAP、CRUSH Ruleset，然后使用CRUSH算法计算出Object所在的OSD set。所以Ceph不需要Name服务器，Client直接和OSD进行通信。
 
 ![enter image description here](http://42.62.73.30/wordpress/wp-content/uploads/2013/09/Distributed-Object-Store.png)
