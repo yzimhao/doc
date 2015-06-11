@@ -47,4 +47,7 @@
         "temp_url_keys": []
        }
   
-  
+ 
+ 为了方便测试，使用一个s3的client连接测试，下载地址：http://www.cloudberrylab.com/free-amazon-s3-explorer-cloudfront-IAM.aspx
+ 
+ 安装上s3 explorer之后，新增一个“Storage Account” 填入服务器ip端口信息、访问密钥、密码key即可成功连上云存储，新建bucket，上传文件，设置文件的acl，即可在浏览器中访问上传的文件。
