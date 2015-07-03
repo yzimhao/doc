@@ -28,3 +28,17 @@
     #初始化数据库
     mogdbsetup --dbhost=183.136.xxx.7 --dbname=mogilefs --dbuser=mogilefs --dbpass=180e2127
 
+
+###### 3. 添加存储用户，复制配置文件，并启动服务，启动存储node
+
+
+    adduser mogile
+    #启动mogilefsd master
+    mogilefsd -c /etc/mogilefs/mogilefsd.conf --daemon
+    
+    #设置存储结点
+    vim /etc/mogilefs/mogstored.conf
+    #启动存储结点
+    mogstored --daemon
+
+    
