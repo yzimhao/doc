@@ -19,6 +19,10 @@
     
     cpanm MogileFS::Network
 
+>  安装速度慢,可以使用国内镜像安装
+
+    cpanm --mirror http://mirrors.163.com/cpan  DBD::mysql
+
 
 ###### 2. 创建数据库账号，初始化数据库
 
