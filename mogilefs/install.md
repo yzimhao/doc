@@ -3,8 +3,7 @@
 ###### 1.  安装基本环境
 
     yum install gcc zlib-devel
-    yum install perl perl-E
-    xtUtils-MakeMaker
+    yum install perl perl-ExtUtils-MakeMaker
     wget --no-check-certificate http://xrl.us/cpanm -O /usr/bin/cpanm
     chmod +x /usr/bin/cpanm 
     
