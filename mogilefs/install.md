@@ -46,3 +46,13 @@
     mogstored --daemon
 
     
+###### 4. MogileFS复制不正常,发现文件少于指定的份数解决方法
+
+> http://www.php-oa.com/2013/11/01/mogilefs-job-replicate-died.html
+
+    perl -MSys::Syscall -e 'print $Sys::Syscall::VERSION'
+    0.25
+    
+如果发现是显示上面的 0.25 就一定会出问题.建议退回到 0.23 就不会在出问题了.所以建议大家在安装完 MogileFS 后,先退回这个模块到 0.23.
+    
+    cpanm http://search.cpan.org/CPAN/authors/id/B/BR/BRADFITZ/Sys-Syscall-0.23.tar.gz
