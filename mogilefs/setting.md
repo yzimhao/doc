@@ -53,3 +53,21 @@ Fsck 将使用了一堆晦涩的错误代码,用来发现和处理问题,我们 
 * BCNT:  'devcount' 的 cache 是错误的.
 
 
+## debug
+
+```
+telnet trackerhost 7001
+Trying 172.16.151.10...
+Connected to 172.16.151.10
+Escape character is '^]'.
+!jobs
+[...]
+fsck count 1
+fsck desired 1
+fsck pids 32664
+.
+!want 5 fsck
+!want 5 fsck
+Now desiring 5 children doing 'fsck'.
+.
+```
