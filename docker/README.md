@@ -13,3 +13,8 @@ docker pull <image> #从docker registry server 中下拉image
 
 docker pull daocloud.io/library/centos:latest #国内环境
 ```
+
+
+### links
+
+http://www.open-open.com/lib/view/open1410568733492.html
