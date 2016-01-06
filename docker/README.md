@@ -1,6 +1,6 @@
 ### 安装
 ```shell
-yum -y install docker
+yum -y install docker-io
 service docker start
 
 ```
