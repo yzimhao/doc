@@ -1,4 +1,4 @@
-### 安装
+### 安装 [http://get.daocloud.io]
 ```shell
 yum -y install docker-io
 service docker start
