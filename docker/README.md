@@ -1,7 +1,8 @@
 ### 安装
 ```shell
-yum -y install docker-io
+yum -y install docker
 service docker start
+
 ```
 
 ### 镜像与容器
