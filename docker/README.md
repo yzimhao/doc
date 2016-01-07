@@ -14,6 +14,13 @@ docker pull <image> #从docker registry server 中下拉image
 docker pull daocloud.io/library/centos:latest #国内环境
 ```
 
+### 使用
+
+```shell
+docker run -v /home/test/dockdata:/data --name datavol -t -i <image id> /bin/bash #挂载一个宿主机目录到容器中 临时运行
+
+docker run -v /home/test/dockdata:/data --name datavol -d -i <image id> /bin/bash #以服务的方式后台运行
+```
 
 ### links
 
