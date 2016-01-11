@@ -23,6 +23,9 @@ docker run -v /home/test/dockdata:/data --name datavol -d -i <image id> /bin/bas
 
 docker ps -l #列出当前的容器
 docker commit <container id> yzimhao/centos-lnmp #保存当前容器的状态
+
+docker rm $(docker ps -a -q) #删除所有容器
+
 ```
 
 ### links
