@@ -35,6 +35,13 @@ docker attach [container-id] #连接到后台运行的容器，以便查看容�
 
 docker commit [container-id] [new-image-name] #保存当前容器的状态
 
+
+#打包镜像
+docker save debian02 >/root/debian02.tar
+
+#在另外的机器上导入镜像
+docker load < debian02.tar
+
 ```
 
 ### links
