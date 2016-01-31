@@ -19,9 +19,11 @@ docker images #查看所有本地镜像
 ### 使用
 
 ```shell
-docker run -v /home/test/dockdata:/data --name datavol -p 80:80 -p 9001:9001 -t -i <image id> /bin/bash #挂载一个宿主机目录到容器中 临时运行
+#挂载一个宿主机目录到容器中 临时运行
+docker run -v /home/test/dockdata:/data --name datavol -p 80:80 -p 9001:9001 -t -i <image id> /bin/bash 
 
-docker run -v /home/test/dockdata:/data --name datavol -p 80:80 -p 9001:9001 -d -i <image id> /bin/bash #以服务的方式后台运行
+#以服务的方式后台运行
+docker run -v /home/test/dockdata:/data --name datavol -p 80:80 -p 9001:9001 -d -i <image id> /bin/bash 
 
 docker ps -l #列出当前的容器
 
