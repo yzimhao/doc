@@ -80,6 +80,12 @@ http {
 /usr/local/ffmpeg/bin/ffmpeg -re -i tounaofengbao.mp4 -vcodec copy -acodec copy -f flv rtmp://172.17.10.206:1935/live/1000
 ```
 
+### m3u8播放
+
+```
+http://172.17.10.206:8080/hls/1000.m3u8
+```
+
 
 
 #### 参考资料
