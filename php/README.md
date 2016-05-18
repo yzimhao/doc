@@ -14,6 +14,8 @@ PHP开发规范将参照PEAR的规范，基本采用[PEAR](http://pear.php.net/m
 
 * 编码规范
 
+* 注释规范
+
 
 * 感激
 
