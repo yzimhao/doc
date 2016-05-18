@@ -16,6 +16,8 @@ PHP开发规范将参照PEAR的规范，基本采用[PEAR](http://pear.php.net/m
 
 * 注释规范
 
+[注释](https://github.com/yzimhao/doc/blob/master/php/%E6%B3%A8%E9%87%8A.md)
+
 
 * 感激
 
