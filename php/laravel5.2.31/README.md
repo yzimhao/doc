@@ -17,7 +17,7 @@ cd laravel-5.2.31/
 wget https://getcomposer.org/download/1.2.2/composer.phar
 php5.5 composer.phar install
 ```
-最后一条可能会报错
+最后一条可能会报错(需要设置相关版本的php环境变量，为这里设置了php5.5, 木有php)
 >Generating autoload files
 Illuminate\Foundation\ComposerScripts::postUpdate
 php artisan optimize
