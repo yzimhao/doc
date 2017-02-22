@@ -8,7 +8,7 @@ gulp.task('md2pdf', function() {
         console.log('pls input output.');
         return;
     }
-    var MD_doc = ['书写规则.md', '编码规范.md', '注释.md'],
+    var MD_doc = ['README.md', '安全规范.md', '书写规则.md', '编码规范.md', '注释.md'],
         PDF_doc = MD_doc.map(function(d){
             return output + d.replace('md', 'pdf')
         });
