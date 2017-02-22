@@ -15,6 +15,7 @@ convert howtogeek.png howtogeek.jpg
 ls -1 *.png | xargs -n 1 bash -c 'convert "$0" "${0%.png}.jpg"'
 ```
 关于上面命令的说明:
+
 1. -1 – 告诉 ls 每行列出一个图像名称的选项标识
 2. -n – 指定最多参数个数，例子中为 1
 3. -c – 指示 bash 运行给定的命令
