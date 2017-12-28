@@ -9,3 +9,9 @@ git push origin local_branch:remote_branch
 ```shell
 git push origin :remote_branch
 ```
+
+#### 3.修改默认的对比工具，使用diffuse
+
+```shell
+git config --global diff.external /usr/bin/git-diffuse.sh
+```
