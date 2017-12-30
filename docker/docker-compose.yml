@@ -11,7 +11,7 @@ mysql:
 
 
 
-php:
+php5.6.32:
     # image: php:5.5.30-fpm
     build: ./php/5.6.32/
     user: root
@@ -35,7 +35,7 @@ nginx:
 
     command: [nginx-debug, '-g', 'daemon off;']
     links:
-        - "php"
+        - "php5.6.32"
     ports:
         - 80:80
         - 8000:8000
