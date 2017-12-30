@@ -48,6 +48,7 @@ nginx:
     command: [nginx-debug, '-g', 'daemon off;']
     links:
         - "php5.6.32"
+        - "php5.4"
     ports:
         - 80:80
         - 8000:8000
