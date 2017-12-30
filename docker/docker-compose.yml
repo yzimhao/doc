@@ -12,8 +12,8 @@ mysql:
 
 
 
-php-fpm:
-    image: bitnami/php-fpm:5.5.30-2
+php:
+    image: php:5.5.30-fpm
     user: root
     privileged: true
     ports:
@@ -23,7 +23,7 @@ php-fpm:
         - /data/logs:/data/logs
 
 
-web:
+nginx:
     image: nginx
     user: root
     privileged: true
@@ -35,7 +35,7 @@ web:
 
     command: [nginx-debug, '-g', 'daemon off;']
     links:
-        - "php-fpm"
+        - "php"
     ports:
         - 80:80
         - 8000:8000
