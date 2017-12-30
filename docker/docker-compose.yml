@@ -22,6 +22,18 @@ php5.6.32:
         - /data/projects/wwwroot/:/data/wwwroot/
         - /data/logs:/data/logs
 
+php5.4:
+    # image: php:5.5.30-fpm
+    build: ./php/5.4/
+    user: root
+    privileged: true
+    # ports:
+        # - 9000:9000
+    volumes:
+        - /data/projects/wwwroot/:/data/wwwroot/
+        - /data/logs:/data/logs
+
+
 
 nginx:
     image: nginx
