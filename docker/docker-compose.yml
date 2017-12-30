@@ -13,7 +13,8 @@ mysql:
 
 
 php:
-    image: php:5.5.30-fpm
+    # image: php:5.5.30-fpm
+    build: ./php/
     user: root
     privileged: true
     ports:
