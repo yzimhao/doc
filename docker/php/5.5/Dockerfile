@@ -1,4 +1,4 @@
-FROM php:5.6-fpm
+FROM php:5.5-fpm
 # Install modules (iconv, mcrypt and gd extensions)
 RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
