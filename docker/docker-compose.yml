@@ -1,42 +1,53 @@
-mysql:
+version: '3'
+services:
+
+  mysql:
     image: mysql
     user: root
     privileged: true
+    restart: always
     ports:
-        - 3306:3306
+      - 3306:3306
     environment:
-        MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
     volumes:
-        - ~/work/mysqldata:/var/lib/mysql
+      - ~/work/mysqldata:/var/lib/mysql
 
 
 
-php-fpm:
+  php5.5:
     image: bitnami/php-fpm:5.5.30-2
     user: root
     privileged: true
-
+    restart: always
     ports:
-        - 9000:9000
+      - 9000:9000
     volumes:
-        - ~/work/wwwroot/:/data/wwwroot/
-        - ~/work/logs:/data/logs
+      - ~/work/wwwroot/:/data/wwwroot/
+      - ~/work/logs:/data/logs
+    networks:
+      - net-php5.5
+      - net-mysql
 
 
 
-web:
+  nginx:
     image: nginx
     user: root
     privileged: true
     volumes:
-        - ~/work/wwwroot/:/data/wwwroot/
-        - ~/work/wwwroot/nginx_conf/nginx.conf:/etc/nginx/nginx.conf:ro
-        - ~/work/wwwroot/nginx_conf/self:/etc/nginx/self:ro
-        - ~/work/logs:/data/logs
-
+      - ~/work/wwwroot/:/data/wwwroot/
+      - ~/work/wwwroot/nginx_conf/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ~/work/wwwroot/nginx_conf/conf.d:/etc/nginx/conf.d:ro
+      - ~/work/logs:/data/logs
     command: [nginx-debug, '-g', 'daemon off;']
-    links:
-        - "php-fpm"
-        - "mysql"
+    restart: always
+    networks:
+      - net-php5.5
+      - net-mysql
     ports:
-        - 80:80
+      - 80:80
+
+networks:
+  net-php5.5:
+  net-mysql:
