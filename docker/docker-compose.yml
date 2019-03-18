@@ -2,7 +2,7 @@ version: '3'
 services:
 
   mysql:
-    image: mysql
+    image: mysql:5.6
     user: root
     privileged: true
     restart: always
@@ -47,6 +47,14 @@ services:
       - net-mysql
     ports:
       - 80:80
+      - 3178:3178
+
+  redis:
+    image: redis
+    restart: always
+    command: [redis-server]
+    ports:
+      - 6379:6379
 
 networks:
   net-php5.5:
