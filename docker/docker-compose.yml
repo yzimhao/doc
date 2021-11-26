@@ -18,7 +18,7 @@ services:
   php5.5:
     image: bitnami/php-fpm:5.5.30-2
     user: root
-    privileged: true
+    #privileged: true
     restart: always
     ports:
       - 9000:9000
@@ -28,6 +28,8 @@ services:
     networks:
       - net-php5.5
       - net-mysql
+    links:
+      - mysql
 
 
 
@@ -47,8 +49,6 @@ services:
       - net-mysql
     ports:
       - 80:80
-      - 3178:3178
-      - 3179:3179
 
 
   redis:
