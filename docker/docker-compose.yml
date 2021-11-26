@@ -48,6 +48,8 @@ services:
     ports:
       - 80:80
       - 3178:3178
+      - 3179:3179
+
 
   redis:
     image: redis
