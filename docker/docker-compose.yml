@@ -13,7 +13,26 @@ services:
     volumes:
       - ~/work/mysqldata:/var/lib/mysql
 
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: test
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
 
+    volumes:
+      - ~/work/postgresdata:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8079:8080
+    networks:
+      - net-postgres
 
   php5.5:
     image: bitnami/php-fpm:5.5.30-2
@@ -49,6 +68,7 @@ services:
       - net-mysql
     ports:
       - 80:80
+      - 801:801
 
 
   redis:
@@ -61,3 +81,4 @@ services:
 networks:
   net-php5.5:
   net-mysql:
+ 
