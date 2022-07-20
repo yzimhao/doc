@@ -7,7 +7,7 @@
     "gulp": "^3.9.1"
   },
   "devDependencies": {
-    "markdown-pdf": "7.0.0",
+    "markdown-pdf": "10.0.0",
     "gulp-concat": "2.6.1"
   },
   "scripts": {
